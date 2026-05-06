@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Blank template</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+
+        <h1>Wellcome to my web</h1>
+        <uL>
+            <li> home </li>
+            <li> <a  href="desain.html"> desain </a> </li>
+                <li> <a href="produk.html"> produk </a> </li>
+                </uL>
+        <marquee> design by : nur widiyaningsih </marquee> 
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        <p>Anaphalis javanica, yang dikenal sebagai Edelweiss jawa (Javanese edelweiss) atau Bunga Senduro, adalah tumbuhan endemik zona alpina/montana di berbagai pegunungan tinggi di Indonesia yang saat ini dikategorikan sebagai tumbuhan langka.</p>
+        <p class="p2"
+        <br> i know I should've fought it
+       <br> At least I'm being honest
+       <br> But stay with me a minute
+       <br> I swear I'll make it worth it
+       <br> 'Cause I don't want to be without you
+
+        <br> So one last time
+        <br> I need to be the one who takes you home
+        <br> One more time
+        <br> I promise after that, I'll let you go
+        <br> Baby, I don't care if you got her in your heart
+        <br> All I really care is you wake up in my arms
+        <br> One last time
+        <br> I need to be the one who takes you home (yeah)
+
+        <br> One last time
+        <br> I need to be the one who takes you homeBaby
+        <br> I don't care if you got her in your heart
+       <br>  All I really care is you wake up in my arms
+        <br> One last time
+        <br> I need to be the one who takes you home
+
+        <br> I know I should've fought it
+        <br> At least I'm being honest
+       <br> But stay with me a minute
+       <br> I swear I'll make it worth it
+       <br> 'Cause I don't want to be without you
+
+       <br>  So one last time
+        <br> I need to be the one who takes you home
+        <br> One more time
+       <br>  I promise after that, I'll let you go
+      <br> Baby, I don't care if you got her in your heart
+       <br>  All I really care is you wake up in my arms
+        <br> One last time
+        <br> I need to be the one who takes you home (yeah)
+
+        <br> One last time
+        <br> I need to be the one who takes you home</pre> </p>
+    </body>
+
+</html>

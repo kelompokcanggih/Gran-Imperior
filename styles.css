@@ -1,0 +1,21 @@
+/* Place your CSS styles in this file */
+
+h1 {text-align: center;
+font-weight: bold ;
+color: brown ;
+}
+marquee {font-size: 36 ;}
+    font-family: {"Geolgio" , sans-serif;}
+    body{background-color: blanchedalmond;}
+.p2 {text-align: center;}
+
+ul {list-style-type:none;
+background-color: beige;
+border: 4px solid pink ;
+}
+
+
+li{display: inline ;
+padding:spx;
+
+}

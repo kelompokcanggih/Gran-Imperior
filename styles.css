@@ -1,21 +1,91 @@
-/* Place your CSS styles in this file */
-
-h1 {text-align: center;
-font-weight: bold ;
-color: brown ;
-}
-marquee {font-size: 36 ;}
-    font-family: {"Geolgio" , sans-serif;}
-    body{background-color: blanchedalmond;}
-.p2 {text-align: left;}
-
-ul {list-style-type:none;
-background-color: beige;
-border: 4px solid pink ;
+/* 🧽 TEMA SPONGEBOB - LENGKAP & PAS 🧽 */
+:root {
+  --kuning: #FFE600;      /* Warna utama SpongeBob */
+  --biru-laut: #41B6E6;   /* Warna air laut */
+  --merah-patrick: #FF69B4;/* Warna Patrick */
+  --coklat: #8B4513;      /* Warna tulisan */
+  --pasir: #FFF8DC;        /* Warna latar (udah ada kayak di layar) */
+  --putih: #FFFFFF;
 }
 
+/* Latar belakang */
+body {
+  background-color: var(--pasir);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
-li{display: inline ;
-padding:spx;
+/* === JUDUL: Wellcome to my web === */
+h1 {
+  color: var(--coklat);
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 20px 0;
+  text-shadow: 1px 1px var(--kuning);
+}
 
+/* === TOMBOL MENU: home | desain | produk === */
+/* Ini kuncinya biar tombol jadi bulat & kuning */
+.menu-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-bar a {
+  text-decoration: none; /* Hilangkan garis bawah link */
+}
+
+.menu-bar button {
+  background-color: var(--kuning);
+  color: var(--coklat);
+  border: 2px solid var(--coklat);
+  padding: 8px 20px;
+  border-radius: 20px; /* Biar bulat ujungnya */
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+/* Kalau disentuh berubah warna biru */
+.menu-bar button:hover {
+  background-color: var(--biru-laut);
+  color: var(--putih);
+}
+
+/* === TULISAN BERJALAN: ur widiyaningsih === */
+marquee {
+  color: var(--merah-patrick); /* Warna merah Patrick */
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+  font-style: italic;
+}
+
+/* === KOTAK ISI: Bunga & Lirik === */
+/* Ini biar ada kotak putih & garis putus-putus kuning */
+.kotak-konten {
+  background-color: var(--putih);
+  border: 2px dashed var(--kuning); /* Garis putus² */
+  border-radius: 15px; /* Lengkung */
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 700px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Teks paragraf biasa */
+p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Teks lirik lagu biar rata tengah & warna biru */
+.lirik {
+  text-align: center;
+  color: var(--biru-laut);
+  font-weight: 500;
 }

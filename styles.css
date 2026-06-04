@@ -1,9 +1,9 @@
 :root {
-  --kuning: #FFE600;      /* Warna utama SpongeBob */
-  --biru-laut: #41B6E6;   /* Warna air laut */
-  --merah-patrick: #FF69B4;/* Warna Patrick */
-  --coklat: #8B4513;      /* Warna tulisan */
-  --pasir: #FFF8DC;        /* Warna latar (udah ada kayak di layar) */
+  --kuning: #FFE600;      
+  --biru-laut: #41B6E6;  
+  --merah-patrick: #FF69B4;
+  --coklat: #8B4513;      
+  --pasir: #FFF8DC;       
   --putih: #FFFFFF;
 }
 
@@ -50,7 +50,7 @@ h1 {
 }
 
 marquee {
-  color: var(--merah-patrick); /* Warna merah Patrick */
+  color: var(--merah-patrick);
   font-size: 22px;
   font-weight: bold;
   margin: 15px 0;
@@ -59,7 +59,7 @@ marquee {
 
 .kotak-konten {
   background-color: var(--putih);
-  border: 2px dashed var(--kuning); /* Garis putus² */
+  border: 2px dashed var(--kuning); 
   border-radius: 15px; /* Lengkung */
   padding: 20px;
   margin: 15px auto;
@@ -73,7 +73,7 @@ p {
   line-height: 1.6;
 }
 
-/* Teks lirik lagu biar rata tengah & warna biru */
+
 .lirik {
   text-align: center;
   color: var(--biru-laut);

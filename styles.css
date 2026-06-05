@@ -1,57 +1,8 @@
+
 * {
   text-decoration: none !important;
 }
 
-body {
-  background-color: var(--pasir);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  color: var(--coklat);
-  text-align: center;
-  font-weight: bold;
-  font-size: 36px;
-  margin: 20px 0;
-  text-shadow: 1px 1px var(--kuning);
-  text-decoration: none;
-}
-
-.menu-bar {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.menu-bar a {
-  text-decoration: none;
-}
-
-.menu-bar button {
-  background-color: var(--kuning);
-  color: var(--coklat);
-  border: 2px solid var(--coklat);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 3px;
-  cursor: pointer;
-}
-
-.menu-bar button:hover {
-  background-color: var(--biru-laut);
-  color: var(--putih);
-}
-
-marquee {
-  color: var(--merah-patrick);
-  font-size: 22px;
-  font-weight: bold;
-  margin: 15px 0;
-  font-style: italic;
-}
 
 .kotak-konten {
   background-color: var(--putih);
@@ -61,26 +12,19 @@ marquee {
   margin: 20px auto;
   max-width: 92%;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  font-size: 24px; /* Ukuran font sesuai permintaan */
+  
+  
+  font-size: 24px !important;
+  font-family: Arial, sans-serif !important;
   line-height: 1.7;
   color: #2c2c2c;
-  text-decoration: none !important;
 }
 
-p {
+
+.kotak-konten p {
+  font-size: 24px !important;
+  font-family: Arial, sans-serif !important;
   text-decoration: none !important;
-  font-family: Arial, 'Segoe UI', sans-serif;
-  font-size: 24px; /* Font paragraf 24px */
-  line-height: 1.7;
   margin: 0;
 }
 
-.kotak-teks {
-  width: 92%;
-  padding: 30px;
-  margin: 20px auto;
-  font-size: 24px;
-  font-family: Arial, 'Segoe UI', sans-serif;
-  border-radius: 16px;
-  text-decoration: none !important;
-}

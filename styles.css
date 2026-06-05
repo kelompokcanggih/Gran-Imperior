@@ -68,10 +68,16 @@ marquee {
 }
 
 p {
-  color: #333333;
-  font-size: 16px;
-  line-height: 1.6;
+  
+.kotak-teks {
+  width: 90%;          
+  padding: 25px;       
+  margin: 20px auto;   
+  font-size: 18px;     
+  font-family: Arial, 'Segoe UI', sans-serif; 
+  border-radius: 8px; 
 }
+
 
 
 .lirik {

@@ -57,13 +57,23 @@ body {
     flex-grow: 1; /* Biar kotak putih mengisi ruang */
 }
 
-/* Biar iframe game rapi dan tidak merusak layout */
-iframe {
+/* Wrapper untuk memastikan game tetap di tengah dan rapi */
+.scratch-wrapper {
     width: 100%;
-    height: 200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Mengatur iframe agar lebih besar tapi tetap dalam batas kotak */
+iframe {
+    width: 100%;       /* Mengambil lebar penuh kotak konten */
+    height: 300px;     /* Ukuran ini lebih besar dari 200px tapi pas di layar HP */
     border: 3px solid #000;
-    border-radius: 10px;
+    border-radius: 12px;
     display: block;
+    background: #fff;  /* Mencegah background transparan aneh */
+}
+
 }
 
 .slide-img {

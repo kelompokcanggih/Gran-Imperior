@@ -136,3 +136,26 @@ body {
     padding: 2px 6px;
     border-radius: 4px;
 }
+
+/* Style Khusus Bingkai Game Scratch biar Pas & Estetik */
+.scratch-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%; /* Menyesuaikan rasio layar game Scratch (4:3) */
+    margin: 15px 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 4px solid #000000; /* Garis pembatas hitam tebal khas kartun */
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+}
+
+.scratch-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+}
+

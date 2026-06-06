@@ -1,136 +1,94 @@
+/* Pengaturan Dasar */
 body {
-    font-family: 'Arial Black', Impact, sans-serif;
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    background-color: #87CEEB; /* Biru langit */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: auto;
-    min-height: 100vh;
-    box-sizing: border-box;
+    padding: 0;
+    color: #333;
 }
 
 .main-container {
-    background-color: #fff200;
-    border: 6px solid #8b5a2b;
-    border-radius: 20px;
-    padding: 20px 15px;
-    /* Mengubah max-width agar kotak kuning fleksibel mengikuti layar lebar gambarmu */
-    max-width: 95vw; 
-    width: 100%;
-    box-shadow: 0px 10px 0px #5c3a1a;
-    box-sizing: border-box;
-    margin-bottom: 40px; 
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFF00; /* Kuning tema */
+    border: 5px solid #000;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
+/* Navigasi */
 .nav-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-btn {
+    padding: 10px 15px;
+    background-color: #00BFFF;
+    color: white;
     text-decoration: none;
-    text-transform: uppercase;
+    border: 2px solid #000;
+    border-radius: 5px;
     font-weight: bold;
-    padding: 10px 22px;
-    border-radius: 10px;
-    font-size: 13px;
-    border: 3px solid #000;
-    box-shadow: 2px 2px 0px #000;
-    transition: all 0.1s ease;
+    text-transform: uppercase;
 }
 
-.btn-home { background-color: #00cdff; color: #fff; }
-.btn-design { background-color: #ff4747; color: #fff; }
-.btn-product { background-color: #a2ff00; color: #333; }
+.btn-design { background-color: #FF6347; }
+.btn-product { background-color: #7FFF00; }
 
+/* Judul Web */
 .project-title {
-    background-color: #ffffff; 
-    color: #ff4747; 
-    border: 4px solid #8b5a2b;
-    text-shadow: 2px 2px 0px #000;
     text-align: center;
     font-size: 24px;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 4px 4px 0px #8b5a2b;
-}
-
-.subtitle {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    color: #8b5a2b;
-    text-shadow: none;
     font-weight: bold;
-    margin-top: 8px;
-    background: #f0f0f0;
-    padding: 3px;
-    border-radius: 5px;
-    border: 2px solid #000;
-}
-
-.content-box {
-    background-color: #ffffff;
-    border: 4px solid #000000;
-    border-radius: 15px;
+    border: 3px solid #8B4513;
     padding: 15px;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    /* Mencegah isi gambar meluber keluar batas putih/hitam */
-    overflow: hidden; 
-    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Mengatur barisan wadah gambar agar tegak lurus mengalir ke bawah */
+/* Wadah Gambar PPT (Dibuat agar gambar tidak keluar) */
 .ppt-vertical-container {
     display: flex;
     flex-direction: column;
-    gap: 16px; 
-    margin-bottom: 25px;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border: 2px dashed #333;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
 }
 
-/* Mengunci gambar agar selalu 100% pas masuk di dalam kotak putih, tidak bocor keluar */
+/* Pengaturan Gambar agar RAPI & PAS */
 .slide-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+    width: 100%;             /* Memaksa gambar selebar kontainer */
+    max-width: 600px;        /* Batas maksimal lebar agar tidak terlalu besar */
+    height: auto;            /* Menjaga proporsi gambar */
+    object-fit: contain;     /* Gambar tidak akan gepeng */
+    border: 3px solid #eee;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: block;          /* Menghilangkan celah bawah pada gambar */
+}
+
+/* Bagian Tentang */
+.about-section {
+    background-color: #fff;
+    padding: 25px;
     border-radius: 10px;
-    border: 4px solid #000000; 
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
-    display: block;
-    box-sizing: border-box;
-}
-
-.about-section h2 {
-    color: #00a2ff;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 12px;
-    -webkit-text-stroke: 1px #000;
-}
-
-.about-section p {
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
-    color: #444444;
-    font-size: 13.5px;
+    border: 2px solid #000;
     line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 15px;
 }
 
 .highlight {
-    background-color: #ff4747;
-    color: #ffffff;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
+    color: #FF4500;
+    font-weight: bold;
+    text-decoration: underline;
+    }

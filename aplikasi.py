@@ -1,31 +1,6 @@
-import time
+import streamlit as st
 
-def kata_manis_awal():
-    print("=" * 80)
-    print("     ✨ WELCOME TO HEALTHY LIFE APP BY KELOMPOK CANGGIH ✨     ")
-    print("=" * 80)
-    print("Halo! Terima kasih sudah peduli sama kesehatan tubuhmu.")
-    print("Panduan ini dibuat agar kamu bisa memasak hidangan sehat dengan presisi.")
-    print("Semangat ya, investasi terbaik adalah tubuh yang sehat! ❤️")
-    print("-" * 80)
-    time.sleep(1)
-
-def tips_diet():
-    print("\n💡 TIPS SUKSES DIET:")
-    print("1. Minum air putih 2 gelas sebelum makan.")
-    print("2. Hindari gorengan dan minuman manis.")
-    print("3. Tidur cukup 7-8 jam per hari.")
-    print("\n🌟 REKOMENDASI TERBAIK:\n- Dada ayam, ikan, brokoli, dan ubi jalar.")
-    print("\n🔥 KATA SEMANGAT:\n'Jangan bandingkan progressmu dengan orang lain. Fokus pada versi terbaik dirimu hari ini!'")
-
-def tips_bulking():
-    print("\n💡 TIPS SUKSES BULKING:")
-    print("1. Makan surplus kalori (lebih dari kebutuhan harian).")
-    print("2. Konsisten latihan beban (hypertrophy).")
-    print("3. Jangan takut makan karbohidrat kompleks.")
-    print("\n🌟 REKOMENDASI TERBAIK:\n- Daging sapi, telur, susu gainer, dan kacang-kacangan.")
-    print("\n🔥 KATA SEMANGAT:\n'Otot tidak dibangun dalam sehari. Konsistensi adalah kunci dari tubuh yang tangguh!'")
-
+# --- DATA DATABASE (Sama persis) ---
 menu_diet_db = {
     "1": {"nama": "Oatmeal Mangga Spesial", "kalori": "320 Kcal", "cara": "PERSIAPAN:\n- Alat: Panci, spatula, mangkuk\n- Bahan: 40g oatmeal, 200ml susu almond, 1 mangga\n\nLANGKAH MEMASAK:\n1. Rebus susu hingga berbuih kecil\n2. Masukkan oatmeal, aduk 5 menit hingga kental\n3. Tuang ke mangkuk\n4. Potong mangga dadu, tata di atasnya"},
     "2": {"nama": "Dada Ayam Panggang", "kalori": "410 Kcal", "cara": "PERSIAPAN:\n- Alat: Teflon, pisau\n- Bahan: 150g dada ayam, lada, garam, olive oil\n\nLANGKAH MEMASAK:\n1. Marinasi ayam dengan lada & garam\n2. Panaskan teflon dengan olive oil\n3. Panggang 6 menit tiap sisi hingga cokelat\n4. Sajikan dengan sayuran rebus"},
@@ -62,32 +37,42 @@ menu_bulking_db = {
     "10": {"nama": "Jus Alpukat Jumbo", "kalori": "530 Kcal", "cara": "PERSIAPAN:\n- Alat: Blender\n- Bahan: 2 alpukat, susu cokelat\n\nLANGKAH MEMASAK:\n1. Blender alpukat & susu\n2. Hias gelas dengan cokelat\n3. Tuang jus\n4. Siap minum"}
 }
 
-def tampilkan_detail(db, pilihan, tipe):
-    if pilihan in db:
-        print("\n" + "✨" * 60)
-        print(f"📋 MENU: {db[pilihan]['nama']}")
-        print(f"🔥 KALORI: {db[pilihan]['kalori']}")
-        print(f"\n🍳 CARA MEMBUAT DETAIL:")
-        print(f"{db[pilihan]['cara']}")
-        print("✨" * 60)
-        if tipe == "diet": tips_diet()
-        else: tips_bulking()
-    else:
-        print("\nMaaf, pilihan tidak ada.")
+# --- TAMPILAN WEB (VERSI CANTIK) ---
+st.title("✨ WELCOME TO HEALTHY LIFE APP BY KELOMPOK CANGGIH ✨")
+st.markdown("---")
+st.write("Halo! Terima kasih sudah peduli sama kesehatan tubuhmu.")
+st.write("Panduan ini dibuat agar kamu bisa memasak hidangan sehat dengan presisi.")
+st.write("Semangat ya, investasi terbaik adalah tubuh yang sehat! ❤️")
+st.markdown("---")
 
-def proses_kategori(tipe, db):
-    print(f"\n--- [ DAFTAR MENU {tipe.upper()} ] ---")
-    for k, v in db.items(): print(f"[{k}] {v['nama']}")
-    pilihan = input("\nPilih nomor menu: ").strip()
-    tampilkan_detail(db, pilihan, tipe)
+kegiatan = st.radio("Pilih tujuanmu:", ["Menurunkan berat badan (Diet)", "Meningkatkan massa otot (Bulking)"])
 
-def main():
-    kata_manis_awal()
-    print("1. Menurunkan berat badan (Diet)")
-    print("2. Meningkatkan massa otot (Bulking)")
-    kegiatan = input("\nPilihanmu (1 atau 2): ").strip()
-    if kegiatan == "1": proses_kategori("diet", menu_diet_db)
-    elif kegiatan == "2": proses_kategori("bulking", menu_bulking_db)
+if "Diet" in kegiatan:
+    st.markdown("### 📋 DAFTAR MENU DIET")
+    pilihan = st.selectbox("Pilih nomor menu:", [f"{k}: {v['nama']}" for k, v in menu_diet_db.items()])
+    nomor = pilihan.split(":")[0]
+    
+    st.markdown("✨" * 30)
+    st.markdown(f"**📋 MENU: {menu_diet_db[nomor]['nama']}**")
+    st.write(f"🔥 **KALORI:** {menu_diet_db[nomor]['kalori']}")
+    st.markdown(f"🍳 **CARA MEMBUAT DETAIL:**\n{menu_diet_db[nomor]['cara']}")
+    st.markdown("✨" * 30)
+    
+    st.write("💡 **TIPS SUKSES DIET:**\n1. Minum air putih 2 gelas sebelum makan.\n2. Hindari gorengan dan minuman manis.\n3. Tidur cukup 7-8 jam per hari.")
+    st.write("🌟 **REKOMENDASI TERBAIK:** Dada ayam, ikan, brokoli, dan ubi jalar.")
+    st.write("🔥 **KATA SEMANGAT:** 'Jangan bandingkan progressmu dengan orang lain. Fokus pada versi terbaik dirimu hari ini!'")
 
-if __name__ == "__main__":
-    main()
+else:
+    st.markdown("### 📋 DAFTAR MENU BULKING")
+    pilihan = st.selectbox("Pilih nomor menu:", [f"{k}: {v['nama']}" for k, v in menu_bulking_db.items()])
+    nomor = pilihan.split(":")[0]
+    
+    st.markdown("✨" * 30)
+    st.markdown(f"**📋 MENU: {menu_bulking_db[nomor]['nama']}**")
+    st.write(f"🔥 **KALORI:** {menu_bulking_db[nomor]['kalori']}")
+    st.markdown(f"🍳 **CARA MEMBUAT DETAIL:**\n{menu_bulking_db[nomor]['cara']}")
+    st.markdown("✨" * 30)
+    
+    st.write("💡 **TIPS SUKSES BULKING:**\n1. Makan surplus kalori (lebih dari kebutuhan harian).\n2. Konsisten latihan beban (hypertrophy).\n3. Jangan takut makan karbohidrat kompleks.")
+    st.write("🌟 **REKOMENDASI TERBAIK:** Daging sapi, telur, susu gainer, dan kacang-kacangan.")
+    st.write("🔥 **KATA SEMANGAT:** 'Otot tidak dibangun dalam sehari. Konsistensi adalah kunci dari tubuh yang tangguh!'")

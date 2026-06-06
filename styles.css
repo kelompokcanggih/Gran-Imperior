@@ -1,145 +1,74 @@
-/* =======================================================
-   KODE CSS SPONGEBOB - VERSI SCROLL MEMANJANG KE BAWAH
-   ======================================================= */
-
+/* Pengaturan Dasar - Sesuai dengan desain rapi di gambar */
 body {
-    font-family: 'Arial Black', Impact, sans-serif;
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    background-color: #33ccff; /* Biru langit yang segar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
-    /* KUNCI 1: Diubah ke flex-start agar scroll dimulai dari atas ke bawah */
-    align-items: flex-start; 
-    /* KUNCI 2: Menggunakan height auto agar layar mengikuti panjang konten */
-    height: auto; 
-    min-height: 100vh;
-    box-sizing: border-box;
-    overflow-y: auto; /* Memastikan scroll vertikal aktif */
 }
 
+/* Container utama dengan bingkai cokelat dan latar kuning */
 .main-container {
-    background-color: #fff200;
-    border: 6px solid #8b5a2b;
-    border-radius: 20px;
-    padding: 25px 20px;
-    max-width: 500px;
     width: 100%;
-    box-shadow: 0px 10px 0px #5c3a1a;
+    max-width: 450px; /* Lebar yang pas untuk HP */
+    padding: 20px;
+    background-color: #FFFF00; /* Kuning cerah */
+    border: 5px solid #8b4513; /* Bingkai cokelat */
+    border-radius: 20px;
     box-sizing: border-box;
-    /* KUNCI 3: Kasih jarak bawah agar konten paling bawah tidak menempel ke ujung layar */
-    margin-bottom: 50px; 
 }
 
+/* Navigasi */
 .nav-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 25px;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-btn {
+    padding: 10px 15px;
+    border-radius: 10px;
     text-decoration: none;
-    text-transform: uppercase;
+    color: white;
     font-weight: bold;
-    padding: 10px 22px;
-    border-radius: 10px;
-    font-size: 13px;
-    border: 3px solid #000;
-    box-shadow: 2px 2px 0px #000;
-    transition: all 0.1s ease;
-}
-
-.nav-btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px #000;
-}
-
-.btn-home { background-color: #00cdff; color: #fff; }
-.btn-design { background-color: #ff4747; color: #fff; }
-.btn-product { background-color: #a2ff00; color: #333; }
-
-.project-title {
-    background-color: #ffffff; 
-    color: #ff4747; 
-    border: 4px solid #8b5a2b;
-    text-shadow: 2px 2px 0px #000;
-    text-align: center;
-    font-size: 24px;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 4px 4px 0px #8b5a2b;
-}
-
-.subtitle {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    color: #8b5a2b;
-    text-shadow: none;
-    font-weight: bold;
-    margin-top: 8px;
-    background: #f0f0f0;
-    padding: 3px;
-    border-radius: 5px;
     border: 2px solid #000;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
-/* Kotak konten utama otomatis memanjang tanpa batas */
-.content-box {
-    background-color: #ffffff;
-    border: 4px solid #000000;
-    border-radius: 15px;
-    padding: 25px 20px;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column; /* Menyusun konten berurutan ke bawah */
-    height: auto; /* Mengikuti panjang teks dan PPT */
-}
+/* Warna tombol navigasi */
+.btn-home { background-color: #00BFFF; }
+.btn-design { background-color: #FF6347; }
+.btn-product { background-color: #7FFF00; }
 
-/* Pembungkus PPT Canva */
-.canva-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%; 
-    margin-bottom: 25px; 
-    overflow: hidden;
-    border-radius: 10px;
-    border: 3px solid #000;
-}
-
-.canva-wrapper iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border: none;
-}
-
-/* Judul Artikel */
-.about-section h2 {
-    color: #00a2ff;
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 12px;
-    -webkit-text-stroke: 1px #000;
-}
-
-/* Teks Paragraf */
-.about-section p {
-    font-family: 'Segoe UI', sans-serif;
+/* Judul Utama */
+.project-title {
+    text-align: center;
     font-weight: bold;
-    color: #444444;
-    font-size: 13.5px;
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 15px;
+    border: 3px solid #8b4513;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-.highlight {
-    background-color: #ff4747;
-    color: #ffffff;
-    padding: 2px 6px;
-    border-radius: 4px;
+/* Section konten putih di dalam kotak kuning */
+.about-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Pengaturan gambar agar tidak meluber */
+.slide-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
 }

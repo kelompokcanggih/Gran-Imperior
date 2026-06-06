@@ -83,16 +83,33 @@ body {
 }
 
 /* KUNCI UTAMA: Mengatur ukuran tinggi Canva biar memanjang ke bawah */
+/* Kunci utama biar Canva memanjang loss ke bawah seperti di video */
 .canva-scroll-container {
     position: relative;
     width: 100%;
-    height: 850px; /* <--- UKURAN PANJANGNYA. Kalau kurang panjang ke bawah, naikin angkanya jadi 1000px atau 1200px */
+    
+    /* 
+       ANGKA DI BAWAH INI ADALAH KUNCINYA!
+       Kalau pas kamu cek masih ada slide yang kepotong di bawah, 
+       tinggal naikin lagi angkanya jadi 3000px, 3500px, atau 4000px 
+       sampai semua slide kamu keluar semua ke bawah.
+    */
+    height: 2800px; 
+    
     margin-bottom: 25px;
     border-radius: 10px;
     border: 4px solid #000;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     overflow: hidden;
 }
+
+.canva-scroll-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
 
 .canva-scroll-container iframe {
     width: 100%;

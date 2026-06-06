@@ -3,14 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Life - Kelompok Canggih</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <title>Healthy Life | Kelompok Canggih</title>
+    <style>
+        /* Reset & Dasar */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        
+        .main-container { max-width: 900px; margin: 20px auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        /* Navigasi */
+        .nav-container { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        .nav-btn { text-decoration: none; font-weight: bold; color: #555; padding: 8px 16px; border-radius: 20px; transition: 0.3s; }
+        .nav-btn:hover { background: #8B4513; color: #fff; }
+        .btn-design { color: #8B4513; border: 2px solid #8B4513; }
+
+        /* Header */
+        .project-title { text-align: center; font-size: 2rem; color: #2d5a27; font-weight: 800; margin-bottom: 20px; }
+        .subtitle { font-size: 1rem; color: #8B4513; margin-top: 10px; padding: 10px; background: #fff8e1; border-radius: 10px; }
+
+        /* Slide Konten */
+        .ppt-vertical-container { display: flex; flex-direction: column; gap: 15px; align-items: center; margin-bottom: 40px; }
+        .slide-img { width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: transform 0.2s; }
+        .slide-img:hover { transform: scale(1.02); }
+
+        /* About Section */
+        .about-section { padding: 20px; background: #fdfdfd; border-left: 5px solid #2d5a27; }
+        .about-section h2 { margin-bottom: 15px; color: #2d5a27; }
+        .about-section p { margin-bottom: 15px; text-align: justify; }
+        .highlight { color: #d32f2f; font-weight: bold; }
+    </style>
 </head>
 <body>
 
     <div class="main-container">
-        
         <nav class="nav-container">
             <a href="index.html" class="nav-btn">HOME</a>
             <a href="desain.html" class="nav-btn btn-design">DESAIN</a>
@@ -19,16 +44,14 @@
 
         <header class="project-title">
             Healthy Life, Happy Body 🍎
-            <div class="subtitle" style="font-size: 16px; margin-top: 10px;">
-                <marquee scrollamount="5" hspace="10" style="color: #8B4513; font-weight: bold;">
-                    Investasi Terbaik Dimulai dari Apa yang Kamu Makan! 🥦✨
-                </marquee>
+            <div class="subtitle">
+                ✨ Investasi Terbaik Dimulai dari Apa yang Kamu Makan! 🥦
             </div>
         </header>
 
         <main class="content-box">
-            
             <div class="ppt-vertical-container">
+                <!-- Slide images loop -->
                 <img src="1_20260606_195122_0000.jpg" alt="Slide 1" class="slide-img">
                 <img src="2_20260606_195122_0001.jpg" alt="Slide 2" class="slide-img">
                 <img src="3_20260606_195122_0002.jpg" alt="Slide 3" class="slide-img">
@@ -51,10 +74,7 @@
                 <p>
                     Dengan adanya aplikasi yang kami buat, maka akan memudahkan para pengguna aplikasi ini dalam mencari informasi terkait <span class="highlight">makanan sehat</span> untuk dikonsumsi.
                 </p>
-                
-                
             </section>
-
         </main>
     </div>
 

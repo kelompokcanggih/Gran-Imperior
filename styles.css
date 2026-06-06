@@ -77,8 +77,8 @@ iframe {
 }
 
 .slide-img {
-    width: 100%;
-    max-width: 300px;
+    width: 45%;
+    max-width: 150px;
     display: block;
     margin: 10px auto;
     border: 3px solid #000;

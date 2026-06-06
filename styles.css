@@ -1,80 +1,132 @@
-
+/* Reset dasar */
 * {
-  text-decoration: none !important;
-  box-sizing: border-box;
-}
-
-:root {
-  --pasir: #fff8dc;
-  --coklat: #8b4513;
-  --kuning: #ffd700;
-  --biru-laut: #1e90ff;
-  --putih: #ffffff;
-  --merah-patrick: #dc143c;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
 }
 
 body {
-  background-color: var(--pasir);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+    background: linear-gradient(135deg, #87CEFA 0%, #B0E0E6 100%); /* Biru laut */
+    min-height: 100vh;
+    padding: 20px 15px;
 }
 
-h1 {
-  color: var(--coklat);
-  text-align: center;
-  font-weight: bold;
-  font-size: 36px;
-  margin: 20px 0;
-  text-shadow: 1px 1px var(--kuning);
+/* Wadah utama */
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #FFF8DC; /* Warna pasir/kuning muda */
+    border: 2px dotted #F08030; /* Oranye cerah */
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Menu tombol atas */
 .menu-bar {
-  text-align: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .menu-bar button {
-  background-color: var(--kuning);
-  color: var(--coklat);
-  border: 2px solid var(--coklat);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 3px;
-  cursor: pointer;
+    flex: 1;
+    padding: 12px 8px;
+    border: 2px dashed #1E90FF; /* Biru laut */
+    border-radius: 25px;
+    background-color: #FFE352; /* Kuning SpongeBob */
+    color: #8B4513; /* Coklat tua */
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-bar button:nth-child(2) {
+    background-color: #FF69B4; /* Merah muda seperti bunga karang */
+    border-color: #DB2777;
+    color: #FFFFFF;
+}
+
+.menu-bar button:nth-child(3) {
+    background-color: #98FB98; /* Hijau rumput laut */
+    border-color: #32CD32;
+    color: #2F4F4F;
 }
 
 .menu-bar button:hover {
-  background-color: var(--biru-laut);
-  color: var(--putih);
+    transform: scale(1.03);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-marquee {
-  color: var(--merah-patrick);
-  font-size: 22px;
-  font-weight: bold;
-  margin: 15px 0;
-  font-style: italic;
+/* Judul besar */
+.main-title {
+    background: linear-gradient(90deg, #FFE352, #FFD700); /* Gradasi kuning SpongeBob */
+    border: 2px solid #F08030;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    font-size: 26px;
+    color: #8B4513;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.kotak-konten {
-  background-color: var(--putih);
-  border: 2px solid var(--kuning);
-  border-radius: 16px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 92%;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+/* Kotak konten */
+.content-box {
+    background-color: #FFFFFF;
+    border: 2px solid #87CEFA;
+    border-radius: 15px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
 }
 
-.kotak-konten p {
-  font-size: 24px !important;
-  font-family: Arial, sans-serif !important;
-  line-height: 1.7;
-  color: #222222;
-  text-decoration: none !important;
-  margin: 0;
-  text-align: justify;
+/* Judul bagian */
+.section-title {
+    font-size: 22px;
+    color: #FF69B4;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #FFD700;
+}
+
+/* Kotak teks pembuka */
+.highlight-box {
+    background-color: #FFFACD;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Teks */
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+/* Daftar anggota */
+ul {
+    padding-left: 22px;
+}
+
+/* Bagian game Scratch */
+.game-container {
+    width: 100%;
+    height: 460px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px dashed #FFD700;
+    margin-top: 15px;
+    background-color: #F0F8FF;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }

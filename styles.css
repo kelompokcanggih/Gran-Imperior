@@ -1,6 +1,6 @@
-/* Pengaturan Dasar - Sesuai dengan desain rapi di gambar */
+/* Pengaturan Dasar (Uniform untuk Semua Halaman) */
 body {
-    background-color: #33ccff; /* Biru langit yang segar */
+    background-color: #87CEEB; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
@@ -8,67 +8,61 @@ body {
     justify-content: center;
 }
 
-/* Container utama dengan bingkai cokelat dan latar kuning */
 .main-container {
     width: 100%;
-    max-width: 450px; /* Lebar yang pas untuk HP */
+    max-width: 450px; 
     padding: 20px;
-    background-color: #FFFF00; /* Kuning cerah */
-    border: 5px solid #8b4513; /* Bingkai cokelat */
+    background-color: #FFFF00; 
+    border: 5px solid #8B4513; 
     border-radius: 20px;
     box-sizing: border-box;
 }
 
-/* Navigasi */
-.nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.nav-btn {
-    padding: 10px 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border: 2px solid #000;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-/* Warna tombol navigasi */
-.btn-home { background-color: #00BFFF; }
-.btn-design { background-color: #FF6347; }
-.btn-product { background-color: #7FFF00; }
-
-/* Judul Utama */
+/* Judul & Marquee (Sama untuk Semua Halaman) */
 .project-title {
     text-align: center;
+    font-size: 20px;
     font-weight: bold;
-    border: 3px solid #8b4513;
+    border: 3px solid #8B4513;
     padding: 15px;
     background-color: #fff;
     border-radius: 15px;
     margin-bottom: 20px;
 }
 
-/* Section konten putih di dalam kotak kuning */
+.subtitle {
+    margin-top: 10px;
+    color: #8B4513;
+    font-size: 14px;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Navigasi (Sama untuk Semua Halaman) */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+/* Section Konten Putih (Untuk About/Produk/Home) */
 .about-section {
     background-color: #fff;
     padding: 20px;
     border-radius: 15px;
     border: 2px solid #000;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-top: 20px;
-}
-
-/* Pengaturan gambar agar tidak meluber */
-.slide-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px 0;
 }

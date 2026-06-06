@@ -130,18 +130,19 @@ body {
 .ppt-vertical-container {
     display: flex;
     flex-direction: column; /* Menyusun slide berurutan ke bawah */
-    gap: 15px;             /* Jarak antar gambar slide */
+    gap: 20px;             /* Jarak antar gambar slide biar ga nempel */
     width: 100%;           /* Memenuhi lebar kotak putih */
-    align-items: center;
+    align-items: center;   /* Membuat posisi pas di tengah */
     box-sizing: border-box;
+    margin-top: 15px;
 }
 
 .slide-img {
-    width: 100%;           /* Lebar gambar mengikuti box */
-    max-width: 100%;       /* Mengunci agar tidak meluber keluar dari box putih */
-    height: auto;          /* Menjaga rasio gambar agar tidak gepeng */
-    border: 3px solid #000;/* Border tebal khas Spongebob */
-    border-radius: 10px;
+    width: 100% !important;     /* Memaksa gambar melebar 100% memenuhi kotak putih */
+    max-width: 100% !important; /* Menghapus batasan 120px yang bikin menciut */
+    height: auto !important;    /* Menjaga proporsi agar gambar tidak gepeng atau ketarik */
+    border: 3px solid #000;     /* Border tebal hitam khas Spongebob */
+    border-radius: 10px;        /* Sudut gambar agak melengkung rapi */
     box-sizing: border-box;
     display: block;
 }

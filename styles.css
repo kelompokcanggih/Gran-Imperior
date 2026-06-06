@@ -92,3 +92,24 @@ body {
     font-weight: bold;
     text-decoration: underline;
     }
+
+/* Tambahkan kode ini ke bagian bawah file styles.css */
+.scratch-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 80%; /* Ini mengatur tinggi game agar tidak gepeng */
+    overflow: hidden;
+    border: 4px solid #8B4513; 
+    border-radius: 10px;
+    background: #eee;
+    margin-top: 15px;
+}
+
+.scratch-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

@@ -1,76 +1,168 @@
-/* --- 1. Dasar Halaman --- */
+/* =======================================================
+   KODE CSS SPONGEBOB - VERSI SCROLL MEMANJANG KE BAWAH
+   ======================================================= */
+
 body {
     font-family: 'Arial Black', Impact, sans-serif;
     background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
     margin: 0;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
+    /* KUNCI 1: Diubah ke flex-start agar scroll dimulai dari atas ke bawah */
+    align-items: flex-start; 
+    /* KUNCI 2: Menggunakan height auto agar layar mengikuti panjang konten */
+    height: auto; 
     min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Memastikan scroll vertikal aktif */
 }
 
-/* --- 2. Kolam Kuning (Main Container) --- */
 .main-container {
     background-color: #fff200;
     border: 6px solid #8b5a2b;
     border-radius: 20px;
-    padding: 15px;
-    max-width: 450px;
+    padding: 25px 20px;
+    max-width: 500px;
     width: 100%;
-    box-shadow: 0px 8px 0px #5c3a1a;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box; /* Memastikan padding tidak membuat container melar */
-    overflow: hidden;       /* Mencegah konten meluber keluar kolam kuning */
-}
-
-/* --- 3. Navigasi & Judul --- */
-.nav-container { display: flex; justify-content: space-between; margin-bottom: 15px; }
-.nav-btn { 
-    text-decoration: none; text-transform: uppercase; font-weight: bold; 
-    padding: 8px 12px; border-radius: 8px; border: 3px solid #000;
-    background: #fff; color: #000; font-size: 10px;
-}
-.project-title {
-    background: #fff; border: 4px solid #8b5a2b; text-align: center;
-    padding: 10px; border-radius: 12px; margin-bottom: 15px; font-size: 14px;
-}
-
-/* --- 4. Kotak Konten Putih --- */
-.content-box {
-    background: #fff; border: 4px solid #000; border-radius: 12px; padding: 15px;
-    flex-grow: 1;
+    box-shadow: 0px 10px 0px #5c3a1a;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Membuat konten di dalamnya rapi di tengah */
+    /* KUNCI 3: Kasih jarak bawah agar konten paling bawah tidak menempel ke ujung layar */
+    margin-bottom: 50px; 
 }
 
-/* --- 5. Aturan Khusus PPT (Agar Tidak Kegedean) --- */
-.ppt-container {
+.nav-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 10px;
-    width: 100%;
-}
-.slide-img {
-    width: 45%;            
-    max-width: 120px;      
-    border: 2px solid #000;
-    border-radius: 5px;
-    display: block;
+    justify-content: space-around;
+    margin-bottom: 25px;
 }
 
-/* --- 6. Aturan Khusus Game/Iframe (PERBAIKAN UTAMA) --- */
-.game-frame {
-    width: 100%;           /* Mengikuti lebar kotak putih */
-    max-width: 100%;       /* Dipaksa agar tidak melebihi kontainer */
-    aspect-ratio: 16 / 9;  /* Mengikuti aspek rasio standard layar landscape */
-    height: auto;          /* Tinggi otomatis menyesuaikan aspect-ratio agar tidak melar */
+.nav-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 13px;
     border: 3px solid #000;
-    border-radius: 8px;
-    display: block;
+    box-shadow: 2px 2px 0px #000;
+    transition: all 0.1s ease;
+}
+
+.nav-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+.btn-home { background-color: #00cdff; color: #fff; }
+.btn-design { background-color: #ff4747; color: #fff; }
+.btn-product { background-color: #a2ff00; color: #333; }
+
+.project-title {
+    background-color: #ffffff; 
+    color: #ff4747; 
+    border: 4px solid #8b5a2b;
+    text-shadow: 2px 2px 0px #000;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 4px 4px 0px #8b5a2b;
+}
+
+.subtitle {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    color: #8b5a2b;
+    text-shadow: none;
+    font-weight: bold;
+    margin-top: 8px;
+    background: #f0f0f0;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+/* Kotak konten utama otomatis memanjang tanpa batas */
+.content-box {
+    background-color: #ffffff;
+    border: 4px solid #000000;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column; /* Menyusun konten berurutan ke bawah */
+    height: auto; /* Mengikuti panjang teks dan PPT */
     box-sizing: border-box;
+}
+
+/* Judul Artikel */
+.about-section h2 {
+    color: #00a2ff;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    -webkit-text-stroke: 1px #000;
+}
+
+/* Teks Paragraf */
+.about-section p {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    color: #444444;
+    font-size: 13.5px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background-color: #ff4747;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* =======================================================
+   PERBAIKAN UTAMA: PENGATURAN PPT GAMBAR AGAR PAS DI LAYAR
+   ======================================================= */
+.ppt-vertical-container {
+    display: flex;
+    flex-direction: column; /* Menyusun slide berurutan ke bawah */
+    gap: 15px;             /* Jarak antar gambar slide */
+    width: 100%;           /* Memenuhi lebar kotak putih */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slide-img {
+    width: 100%;           /* Lebar gambar mengikuti box */
+    max-width: 100%;       /* Mengunci agar tidak meluber keluar dari box putih */
+    height: auto;          /* Menjaga rasio gambar agar tidak gepeng */
+    border: 3px solid #000;/* Border tebal khas Spongebob */
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* =======================================================
+   PERBAIKAN UTAMA: PENGATURAN GAME/SCRATCH IFRAME
+   ======================================================= */
+.scratch-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;   /* Rasio standar player Scratch */
+    border: 3px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.scratch-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }

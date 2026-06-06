@@ -5,7 +5,8 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Diubah ke flex-start agar saat memanjang, scroll mulai dari atas */
+    align-items: flex-start; /* Mulai scroll dari atas */
+    height: auto;
     min-height: 100vh;
     box-sizing: border-box;
 }
@@ -19,7 +20,7 @@ body {
     width: 100%;
     box-shadow: 0px 10px 0px #5c3a1a;
     box-sizing: border-box;
-    margin-bottom: 20px; /* Jarak aman di bawah agar tidak mentok saat di-scroll */
+    margin-bottom: 50px; 
 }
 
 .nav-container {
@@ -70,7 +71,6 @@ body {
     border: 2px solid #000;
 }
 
-/* Kotak konten utama otomatis memanjang ke bawah mengikuti isi */
 .content-box {
     background-color: #ffffff;
     border: 4px solid #000000;
@@ -78,26 +78,25 @@ body {
     padding: 25px 20px;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     display: flex;
-    flex-direction: column; /* Memaksa isi di dalamnya tersusun berurutan ke bawah */
+    flex-direction: column;
+    height: auto;
 }
 
-.canva-wrapper {
+/* KUNCI UTAMA: Mengatur ukuran tinggi Canva biar memanjang ke bawah */
+.canva-scroll-container {
     position: relative;
     width: 100%;
-    height: 0;
-    padding-top: 56.25%; /* Proporsi layar presentasi */
-    margin-bottom: 25px; /* Jarak antara PPT dan teks di bawahnya */
-    overflow: hidden;
+    height: 850px; /* <--- UKURAN PANJANGNYA. Kalau kurang panjang ke bawah, naikin angkanya jadi 1000px atau 1200px */
+    margin-bottom: 25px;
     border-radius: 10px;
-    border: 3px solid #000;
+    border: 4px solid #000;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    overflow: hidden;
 }
 
-.canva-wrapper iframe {
-    position: absolute;
+.canva-scroll-container iframe {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     border: none;
 }
 
@@ -125,4 +124,3 @@ body {
     padding: 2px 6px;
     border-radius: 4px;
 }
-

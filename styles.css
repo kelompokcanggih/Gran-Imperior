@@ -1,91 +1,145 @@
-/* Pengaturan Dasar */
+/* =======================================================
+   KODE CSS SPONGEBOB - VERSI SCROLL MEMANJANG KE BAWAH
+   ======================================================= */
+
 body {
-    background-color: #87CEEB; /* Biru langit */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial Black', Impact, sans-serif;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
+    /* KUNCI 1: Diubah ke flex-start agar scroll dimulai dari atas ke bawah */
+    align-items: flex-start; 
+    /* KUNCI 2: Menggunakan height auto agar layar mengikuti panjang konten */
+    height: auto; 
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Memastikan scroll vertikal aktif */
 }
 
 .main-container {
+    background-color: #fff200;
+    border: 6px solid #8b5a2b;
+    border-radius: 20px;
+    padding: 25px 20px;
+    max-width: 500px;
     width: 100%;
-    max-width: 500px; /* Lebar pas agar bingkai biru tetap terlihat */
-    padding: 20px;
-    background-color: #FFFF00; /* Kuning tema */
-    border: 5px solid #000;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    box-sizing: border-box; 
+    box-shadow: 0px 10px 0px #5c3a1a;
+    box-sizing: border-box;
+    /* KUNCI 3: Kasih jarak bawah agar konten paling bawah tidak menempel ke ujung layar */
+    margin-bottom: 50px; 
 }
 
-/* Navigasi */
 .nav-container {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 25px;
 }
 
 .nav-btn {
-    padding: 8px 12px;
-    background-color: #00BFFF;
-    color: white;
     text-decoration: none;
-    border: 2px solid #000;
-    border-radius: 5px;
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    border: 3px solid #000;
+    box-shadow: 2px 2px 0px #000;
+    transition: all 0.1s ease;
 }
 
-.btn-design { background-color: #FF6347; }
-.btn-product { background-color: #7FFF00; }
+.nav-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+}
 
-/* Judul Web */
+.btn-home { background-color: #00cdff; color: #fff; }
+.btn-design { background-color: #ff4747; color: #fff; }
+.btn-product { background-color: #a2ff00; color: #333; }
+
 .project-title {
+    background-color: #ffffff; 
+    color: #ff4747; 
+    border: 4px solid #8b5a2b;
+    text-shadow: 2px 2px 0px #000;
     text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border: 3px solid #8B4513;
+    font-size: 24px;
     padding: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    line-height: 1.4; 
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 4px 4px 0px #8b5a2b;
 }
 
-/* Pengaturan Gambar PPT */
-.ppt-vertical-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 20px 0;
-    width: 100%;
-}
-
-.slide-img {
-    width: 100%;
-    height: auto;
-    border: 3px solid #eee;
+.subtitle {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    color: #8b5a2b;
+    text-shadow: none;
+    font-weight: bold;
+    margin-top: 8px;
+    background: #f0f0f0;
+    padding: 3px;
     border-radius: 5px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-    display: block;
+    border: 2px solid #000;
 }
 
-/* Bagian Tentang */
-.about-section {
-    background-color: #fff;
-    padding: 20px;
+/* Kotak konten utama otomatis memanjang tanpa batas */
+.content-box {
+    background-color: #ffffff;
+    border: 4px solid #000000;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column; /* Menyusun konten berurutan ke bawah */
+    height: auto; /* Mengikuti panjang teks dan PPT */
+}
+
+/* Pembungkus PPT Canva */
+.canva-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; 
+    margin-bottom: 25px; 
+    overflow: hidden;
     border-radius: 10px;
-    border: 2px solid #000;
-    line-height: 1.5;
-    margin-top: 20px;
+    border: 3px solid #000;
+}
+
+.canva-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+/* Judul Artikel */
+.about-section h2 {
+    color: #00a2ff;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    -webkit-text-stroke: 1px #000;
+}
+
+/* Teks Paragraf */
+.about-section p {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    color: #444444;
+    font-size: 13.5px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
 }
 
 .highlight {
-    color: #FF4500;
-    font-weight: bold;
-    text-decoration: underline;
+    background-color: #ff4747;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
 }

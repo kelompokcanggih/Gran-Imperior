@@ -1,4 +1,3 @@
-/* Mengatur font dan background gradasi luar bertema Bikini Bottom */
 body {
     font-family: 'Arial Black', Impact, sans-serif;
     background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
@@ -6,24 +5,23 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Diubah ke flex-start agar saat memanjang, scroll mulai dari atas */
     min-height: 100vh;
     box-sizing: border-box;
 }
 
-/* Container utama (Warna Kuning Spongebob & border cokelat celananya) */
 .main-container {
     background-color: #fff200;
     border: 6px solid #8b5a2b;
     border-radius: 20px;
     padding: 25px 20px;
-    max-width: 500px; /* Sedikit dilebarkan agar Canva terlihat jelas */
+    max-width: 500px;
     width: 100%;
     box-shadow: 0px 10px 0px #5c3a1a;
     box-sizing: border-box;
+    margin-bottom: 20px; /* Jarak aman di bawah agar tidak mentok saat di-scroll */
 }
 
-/* Navigasi Tombol */
 .nav-container {
     display: flex;
     justify-content: space-around;
@@ -42,16 +40,10 @@ body {
     transition: all 0.1s ease;
 }
 
-.nav-btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0px #000;
-}
-
 .btn-home { background-color: #00cdff; color: #fff; }
 .btn-design { background-color: #ff4747; color: #fff; }
 .btn-product { background-color: #a2ff00; color: #333; }
 
-/* Banner Judul */
 .project-title {
     background-color: #ffffff; 
     color: #ff4747; 
@@ -65,7 +57,6 @@ body {
     box-shadow: 4px 4px 0px #8b5a2b;
 }
 
-/* Style Khusus teks jalan Marquee Kelompok */
 .subtitle {
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
@@ -79,22 +70,23 @@ body {
     border: 2px solid #000;
 }
 
-/* Kotak Konten Putih dengan Outline Hitam Kartun */
+/* Kotak konten utama otomatis memanjang ke bawah mengikuti isi */
 .content-box {
     background-color: #ffffff;
     border: 4px solid #000000;
     border-radius: 15px;
     padding: 25px 20px;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column; /* Memaksa isi di dalamnya tersusun berurutan ke bawah */
 }
 
-/* Responsif Embed Canva biar Pas di Dalam Kotak */
 .canva-wrapper {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 56.25%;
-    margin-bottom: 20px;
+    padding-top: 56.25%; /* Proporsi layar presentasi */
+    margin-bottom: 25px; /* Jarak antara PPT dan teks di bawahnya */
     overflow: hidden;
     border-radius: 10px;
     border: 3px solid #000;
@@ -109,7 +101,6 @@ body {
     border: none;
 }
 
-/* Judul Materi */
 .about-section h2 {
     color: #00a2ff;
     font-size: 20px;
@@ -118,9 +109,8 @@ body {
     -webkit-text-stroke: 1px #000;
 }
 
-/* Teks Paragraf Materi Makanan Sehat */
 .about-section p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
     color: #444444;
     font-size: 13.5px;
@@ -129,33 +119,10 @@ body {
     margin-bottom: 15px;
 }
 
-/* Highlight merah untuk poin penting */
 .highlight {
     background-color: #ff4747;
     color: #ffffff;
     padding: 2px 6px;
     border-radius: 4px;
-}
-
-/* Style Khusus Bingkai Game Scratch biar Pas & Estetik */
-.scratch-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 75%; /* Menyesuaikan rasio layar game Scratch (4:3) */
-    margin: 15px 0;
-    overflow: hidden;
-    border-radius: 12px;
-    border: 4px solid #000000; /* Garis pembatas hitam tebal khas kartun */
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
-}
-
-.scratch-wrapper iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border: none;
 }
 

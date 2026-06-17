@@ -144,13 +144,10 @@ body {
     display: block;
 }
 
-/* =======================================================
-   PERBAIKAN UTAMA: PENGATURAN GAME/SCRATCH IFRAME
-   ======================================================= */
 .scratch-wrapper {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 4 / 3;   /* Rasio standar player Scratch */
+    aspect-ratio: 4 / 3;   
     border: 3px solid #000;
     border-radius: 10px;
     overflow: hidden;

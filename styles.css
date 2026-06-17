@@ -124,25 +124,22 @@ body {
     border-radius: 4px;
 }
 
-/* =======================================================
-   PERBAIKAN UTAMA: PENGATURAN PPT GAMBAR AGAR PAS DI LAYAR
-   ======================================================= */
 .ppt-vertical-container {
     display: flex;
-    flex-direction: column; /* Menyusun slide berurutan ke bawah */
-    gap: 20px;             /* Jarak antar gambar slide biar ga nempel */
-    width: 100%;           /* Memenuhi lebar kotak putih */
-    align-items: center;   /* Membuat posisi pas di tengah */
+    flex-direction: column; 
+    gap: 20px;             
+    width: 100%;           
+    align-items: center; 
     box-sizing: border-box;
     margin-top: 15px;
 }
 
 .slide-img {
-    width: 100% !important;     /* Memaksa gambar melebar 100% memenuhi kotak putih */
-    max-width: 100% !important; /* Menghapus batasan 120px yang bikin menciut */
-    height: auto !important;    /* Menjaga proporsi agar gambar tidak gepeng atau ketarik */
-    border: 3px solid #000;     /* Border tebal hitam khas Spongebob */
-    border-radius: 10px;        /* Sudut gambar agak melengkung rapi */
+    width: 100% !important;     
+    max-width: 100% !important; 
+    height: auto !important;    
+    border: 3px solid #000;     
+    border-radius: 10px;        
     box-sizing: border-box;
     display: block;
 }

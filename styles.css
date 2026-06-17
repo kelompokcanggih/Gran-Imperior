@@ -6,13 +6,11 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    /* KUNCI 1: Diubah ke flex-start agar scroll dimulai dari atas ke bawah */
     align-items: flex-start; 
-    /* KUNCI 2: Menggunakan height auto agar layar mengikuti panjang konten */
     height: auto; 
     min-height: 100vh;
     box-sizing: border-box;
-    overflow-y: auto; /* Memastikan scroll vertikal aktif */
+    overflow-y: auto; 
 }
 
 .main-container {
@@ -24,7 +22,6 @@ body {
     width: 100%;
     box-shadow: 0px 10px 0px #5c3a1a;
     box-sizing: border-box;
-    /* KUNCI 3: Kasih jarak bawah agar konten paling bawah tidak menempel ke ujung layar */
     margin-bottom: 50px; 
 }
 
@@ -81,7 +78,6 @@ body {
     border: 2px solid #000;
 }
 
-/* Kotak konten utama otomatis memanjang tanpa batas */
 .content-box {
     background-color: #ffffff;
     border: 4px solid #000000;
@@ -89,12 +85,11 @@ body {
     padding: 25px 20px;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
     display: flex;
-    flex-direction: column; /* Menyusun konten berurutan ke bawah */
-    height: auto; /* Mengikuti panjang teks dan PPT */
+    flex-direction: column; 
+    height: auto; 
     box-sizing: border-box;
 }
 
-/* Judul Artikel */
 .about-section h2 {
     color: #00a2ff;
     font-size: 20px;
@@ -103,7 +98,6 @@ body {
     -webkit-text-stroke: 1px #000;
 }
 
-/* Teks Paragraf */
 .about-section p {
     font-family: 'Segoe UI', sans-serif;
     font-weight: bold;

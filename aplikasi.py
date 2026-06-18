@@ -1,6 +1,5 @@
 import streamlit as st
 
-# --- DATA DATABASE (Sama persis) ---
 menu_diet_db = {
     "1": {"nama": "Oatmeal Mangga Spesial", "kalori": "320 Kcal", "cara": "PERSIAPAN:\n- Alat: Panci, spatula, mangkuk\n- Bahan: 40g oatmeal, 200ml susu almond, 1 mangga\n\nLANGKAH MEMASAK:\n1. Rebus susu hingga berbuih kecil\n2. Masukkan oatmeal, aduk 5 menit hingga kental\n3. Tuang ke mangkuk\n4. Potong mangga dadu, tata di atasnya"},
     "2": {"nama": "Dada Ayam Panggang", "kalori": "410 Kcal", "cara": "PERSIAPAN:\n- Alat: Teflon, pisau\n- Bahan: 150g dada ayam, lada, garam, olive oil\n\nLANGKAH MEMASAK:\n1. Marinasi ayam dengan lada & garam\n2. Panaskan teflon dengan olive oil\n3. Panggang 6 menit tiap sisi hingga cokelat\n4. Sajikan dengan sayuran rebus"},
@@ -37,7 +36,6 @@ menu_bulking_db = {
     "10": {"nama": "Jus Alpukat Jumbo", "kalori": "530 Kcal", "cara": "PERSIAPAN:\n- Alat: Blender\n- Bahan: 2 alpukat, susu cokelat\n\nLANGKAH MEMASAK:\n1. Blender alpukat & susu\n2. Hias gelas dengan cokelat\n3. Tuang jus\n4. Siap minum"}
 }
 
-# --- TAMPILAN WEB (VERSI CANTIK) ---
 st.title("✨ WELCOME TO HEALTHY LIFE APP BY KELOMPOK CANGGIH ✨")
 st.markdown("---")
 st.write("Halo! Terima kasih sudah peduli sama kesehatan tubuhmu.")
